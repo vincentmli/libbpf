@@ -82,7 +82,7 @@ DESTDIR ?=
 
 HOSTARCH = $(firstword $(subst -, ,$(shell $(CC) -dumpmachine)))
 ifeq ($(filter-out %64 %64be %64eb %64le %64el s390x, $(HOSTARCH)),)
-	LIBSUBDIR := lib64
+	LIBSUBDIR := lib
 else
 	LIBSUBDIR := lib
 endif
